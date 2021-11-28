@@ -2,8 +2,8 @@
 function setDate() {
     let bySelector = ".by"
     let toSelector = ".to"
-    let daysBack = -5;
-    let daysTo = 0;
+    let daysBack = -5;  // начальная дата(отсегодня)
+    let daysTo = 0; // конечная дата(от сегодня)
     let monthA = ["Января", "Февраля", "Марта", "Апреля", "Мая", "Июня", "Июля",
         "Августа", "Сентября", "Октября", "Ноября", "Декабря"];
 
