@@ -1,0 +1,112 @@
+<!-- MODAL BUTTON -->
+<link rel="stylesheet" href="modal.css">
+<main class="wrapper-modal" role="main">
+    <button class="button-modal button--register" data-module-init="modal" id="modal-btn-open">Оставить отзыв</button>
+  </main>
+  <div class="modal" style="display: none;" data-module="modal" role="dialog" aria-label="registration form" aria-hidden="true">
+    <div class="modal__backdrop" data-modal-close data-modal-backdrop></div>
+    <article class="modal__content" data-modal-content>
+      <header class="modal__header">
+        <h2 class="modal__title">Пожалуйста, оставтье свой отзыв</h2>
+        <button class="modal__close" data-modal-close>
+          <span>Закрыть</span>
+          <svg viewbox="0 0 512.001 512.001">
+            <path d="M284.286,256.002L506.143,34.144c7.811-7.811,7.811-20.475,0-28.285c-7.811-7.81-
+20.475-7.811-28.285,0L256,227.717 L34.143,5.859c-7.811-7.811-20.475-7.811-28.285,0c-7.81,7.811-7.811,20.475,0,28.285l221.857,221.857L5.858,477.859 c-7.811,7.811-
+7.811,20.475,0,28.285c3.905,3.905,9.024,5.857,14.143,5.857c5.119,0,10.237-1.952,14.143-
+5.857L256,284.287 l221.857,221.857c3.905,3.905,9.024,5.857,
+14.143,5.857s10.237-1.952,14.143-5.857c7.811-7.811,7.811-20.475,0-28.285 L284.286,256.002z"/>
+          </svg>
+        </button>
+      </header> 
+      <div class="modal__body">
+        <form class="form" action="spas.html" method="post" id="register">
+          <div class="form__group">
+            <label for="name"
+                   class="form__label"
+                   id="register__email">Ваше имя</label>
+            <input type="name1" 
+                   name="name1"
+                   aria-labelledby="register__email"
+                   class="form__input"
+                   placeholder="Введите ваше имя"
+                   required 
+                   id="input-1"
+                   aria-required="true">
+          </div>
+          <div class="form__group">
+            <label for="text" 
+                   class="form__label"
+                   id="register__password">Ваш отзыв</label>
+            <input type="text" 
+                   name="text" 
+                   aria-labelledby="register__password"
+                   class="form__input"
+                   placeholder="Текст отзыва"
+                   minlength="1"
+                   required 
+                   id="input-2"
+                   aria-required="true">
+          </div>
+          <div class="form__group">
+            <input type="checkbox" checked
+                   name="newsletter" 
+                   aria-labelledby="register__newsletter-checkbox"
+                   class="form__checkbox"
+                   id="newsletter">
+            <label for="newsletter" 
+                   class="form__label form__label--checkbox"
+                   id="register__newsletter-checkbox"              
+                   >
+                   Я согласен с политикой конфиденциальности и пользовательским соглашением.
+            </label>
+          </div>
+          <button type="submit" class="button-modal form__button" id="click-button">Отправить</button>
+        </form>
+        <style>
+         .card {
+            width: 100%;
+           text-align: center;
+           padding: 20px 0;
+           background: #EBF0F5;
+           background: white;
+           padding: 20px;
+           border-radius: 4px;
+           box-shadow: 0 2px 3px #C8D0D8;
+           display: inline-block;
+           margin: 0 auto;
+         }
+           .card h1 {
+             color: #88B04B;
+             font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+             font-weight: 900;
+             font-size: 40px;
+             margin-bottom: 10px;
+             margin-top: 10px;
+           }
+           .card p {
+             color: #404F5E;
+             font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+             font-size:20px;
+             margin: 0;
+           }
+         .card i {
+           color: #9ABC66;
+           font-size: 100px;
+           line-height: 200px;
+           margin-left:-15px;
+         }
+       </style>
+        <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+         <div class="card" style="display: none;" id="success-card">
+         <div style="border-radius:200px; height:200px; width:200px; background: #F8FAF5; margin:0 auto;">
+           <i class="checkmark">✓</i>
+         </div>
+           <h1>Спасибо</h1> 
+           <p>Отзыв отправлен<br/></p>
+         </div>
+      </div>
+    </article>
+  </div>
+  <script src="modal.js"></script>
+  <!-- MODAL BUTTON -->
