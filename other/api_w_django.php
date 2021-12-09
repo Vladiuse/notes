@@ -57,3 +57,18 @@ $django_result = curl_exec($ch);
 # ---------------- 
 die();
 ?>
+
+<?php
+# вывести файлы текущей директории
+$dir    = __DIR__;
+$files1 = scandir($dir);
+$res = '';
+foreach ($files1 as $value) {
+    if(stristr($value, '.') === FALSE) {
+        $res = $res . $value . ';';
+    }
+  }
+
+print($res);
+die();
+?>
