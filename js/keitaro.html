@@ -1,0 +1,93 @@
+<script>
+KTracking.ready(function(subid, token) {
+ console.log(subid);
+    var hide_input = document.createElement('input');
+ hide_input.setAttribute('name', 'clickid');
+ hide_input.setAttribute('type', 'hidden');
+ hide_input.value = subid;
+ 
+ var forms = document.querySelectorAll('form');
+  
+    forms.forEach(function(element) {
+     var input = element.querySelector('input[name=clickid]');
+  if (input) {
+   console.log('change value');
+   input.value = subid;
+  } else {
+   console.log('add input');
+   var input_clone = hide_input.cloneNode();
+   element.append(input_clone);
+  }
+    });
+});
+</script>
+<script>
+function getURLParameter(name) {
+ return decodeURI(
+  (RegExp(name + '=' + '(.*?)(&|$)').exec(location.search)||[,null])[1] || ''
+ );
+}
+
+document.addEventListener("DOMContentLoaded", function(event) {
+ var fbp = getURLParameter('fbp');
+ if (fbp != "") {
+     var hide_input = document.createElement('input');
+  hide_input.setAttribute('name', 'fbp');
+  hide_input.setAttribute('type', 'hidden');
+  hide_input.value = fbp;
+
+  var forms = document.querySelectorAll('form');
+  forms.forEach(function(element) {
+      var input = element.querySelector('input[name=fbp]');
+   if (input) {
+    console.log('change value');
+    input.value = subid;
+   } else {
+    console.log('add input');
+    var input_clone = hide_input.cloneNode();
+    element.append(input_clone);
+   }
+     });
+ }
+});
+</script>
+<script>
+function getURLParameter(name) {
+ return decodeURI(
+  (RegExp(name + '=' + '(.*?)(&|$)').exec(location.search)||[,null])[1] || ''
+ );
+}
+// Получить id Баера
+document.addEventListener("DOMContentLoaded", function(event) {
+ var bay = getURLParameter('bay');
+ if (bay != "") {
+     var hide_input = document.createElement('input');
+  hide_input.setAttribute('name', 'bay');
+  hide_input.setAttribute('type', 'hidden');
+  hide_input.value = bay;
+
+  var forms = document.querySelectorAll('form');
+  forms.forEach(function(element) {
+      var input = element.querySelector('input[name=bay]');
+    console.log('add input');
+    var input_clone = hide_input.cloneNode();
+    element.append(input_clone);
+     });
+ }
+});
+</script>
+
+<script type="text/javascript">
+  // Get the current year and put it in a variable
+  var day = new Date().getDate().toString();
+  var month = (new Date().getMonth()+1).toString();
+  var year = day+'.'+month;
+  var day1 = new Date().getDate().toString();
+  var month1 = (new Date().getMonth()+1).toString();
+  var years = (new Date().getYear()+1900).toString();
+  var yearn = day+'.'+month+'.'+years;
+  // Write the date into element with ID "year"
+  document.getElementById("year").innerHTML = yearn;
+  document.getElementById("year1").innerHTML = year;
+  document.getElementById("year2").innerHTML = year;
+</script>
