@@ -14,3 +14,16 @@ function setDate() {
     $(toSelector).html(p.getDate() + daysTo + " " + monthA[p.getMonth()] + " ");
 };
 setDate();
+
+// Smooth Scroll
+const btn = document.querySelectorAll('a[href*="#"]');
+const hiddenElement = document.getElementById("target");
+for (let btns of btn) {
+  btns.addEventListener("click", function (e) {
+    e.preventDefault();
+    hiddenElement.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  });
+}
