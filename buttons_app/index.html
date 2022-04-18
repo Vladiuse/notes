@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="./bootstrap/bootstrap.css">
+  <script src="./bootstrap/bootstrap.min.js"></script>
+  <script src="./bootstrap/bootstrap.bundle.js"></script>
+  <script src="./js/jquery-3.6.0.min.js">
+  </script>
+
+</head>
+<body>
+  <div class="main-wrapper">
+    <div class="btn-row">
+      <div id="main-buttons">
+       <!-- кнопки -->
+      </div>
+      <div class="add-main">
+        <button class="btn btn-light add" area="main">+</button>
+        <div class="add-data" id="main" style="display: none">
+          <input type="text" class="form-control" >
+        <button class="btn btn-success">add</button>
+        </div>
+      </div>
+    </div>
+    <div class="btn-row">
+      <div id="sub-buttons">
+        <!-- кнопки -->
+      </div>
+      <div class="add-sub">
+        <button class="btn btn-light add" area="sub">+</button>
+        <div class="add-data" id="sub" style="display: none">
+          <input type="text" class="form-control" ><br>
+          <input type="text" class="form-control" >
+        <button class="btn btn-success">add</button>
+        </div>
+      </div>
+
+    </div>
+    <div id="text-data">
+      <textarea disabled>пока пусто</textarea>
+    </div>
+  </div>
+  <script src="./js/main.js">
+  </script>
+</body>
+</html>
