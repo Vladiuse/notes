@@ -1,0 +1,28 @@
+SiteError: /home/vlad/lands/work/saved_sites/siliconelidsordishes.xcartpro.com
+SiteError'https://katiesclub.sk/o-nas/\tSK': /home/vlad/lands/work/saved_sites/katiesclub.sk
+SiteError'https://www.legrand.sk/electrend/newsletter/\tSK': /home/vlad/lands/work/saved_sites/www.legrand.sk
+SiteError'http://www.hotelcomfort.sk/svk/kontakt/\tSK': /home/vlad/lands/work/saved_sites/www.hotelcomfort.sk
+SiteError'http://irongymbratislava.sk/kontakt/\tSK': /home/vlad/lands/work/saved_sites/irongymbratislava.sk
+SiteError'https://hotelgalanta.sk/kontakt/\tSK': /home/vlad/lands/work/saved_sites/hotelgalanta.sk
+SiteError[Errno 2] No such file or directory: '/home/vlad/lands/work/saved_sites/katiesclub.sk/wp-content/themes/ascend_premium child/style.css': /home/vlad/lands/work/saved_sites/katiesclub.sk
+SiteError[Errno 2] No such file or directory: '/home/vlad/lands/work/saved_sites/SK_katiesclub.sk/wp-content/themes/ascend_premium child/style.css': /home/vlad/lands/work/saved_sites/SK_katiesclub.sk
+SiteError[Errno 2] No such file or directory: '/home/vlad/lands/work/saved_sites/SK_katiesclub.sk/wp-content/themes/ascend_premium child/style.css': /home/vlad/lands/work/saved_sites/SK_katiesclub.sk
+SiteError[Errno 2] No such file or directory: '/home/vlad/lands/work/saved_sites/SK_katiesclub.sk/wp-content/themes/ascend_premium child/style.css': /home/vlad/lands/work/saved_sites/SK_katiesclub.sk
+SiteError[Errno 2] No such file or directory: '/home/vlad/lands/work/saved_sites/katiesclub.sk/wp-content/themes/ascend_premium child/style.css': /home/vlad/lands/work/saved_sites/katiesclub.sk
+SiteError: /home/vlad/lands/work/saved_sites/45.32.144.228
+SiteError[Errno 13] Permission denied: '/lander': /home/vlad/lands/work/saved_sites/karl-miller.com
+SiteError[Errno 13] Permission denied: '/lander': /home/vlad/lands/work/saved_sites/karl-miller.com
+SiteError[Errno 13] Permission denied: '/lander': /home/vlad/lands/work/saved_sites/karl-miller.com
+SiteError[Errno 13] Permission denied: '/lander': /home/vlad/lands/work/saved_sites/karl-miller.com
+SiteError' https://trafficredircted.com/lander/delta.airlinesdial.com/index.php': /home/vlad/lands/work/saved_sites/
+SiteError[Errno 13] Permission denied: '/lander': /home/vlad/lands/work/saved_lands/vickihball.store
+SiteError'https://doorloops.ga/?ad_id={{ad.id}}&adset_id={{adset.id}}&fbp=1195827451226242\tсловения': /home/vlad/lands/work/saved_lands/doorloops.ga
+SiteError'https://startfeel.tk/?ad_id={{ad.id}}&adset_id={{adset.id}}&fbp=638592124014562\tвенгрия': /home/vlad/lands/work/saved_lands/startfeel.tk
+SiteError'https://runskept.tk/?ad_id={{ad.id}}&adset_id={{adset.id}}&fbp=673285543696777\tфранция': /home/vlad/lands/work/saved_lands/runskept.tk
+SiteError'https://www.canva.com/design/DAEs0TyfFjk/6QvqZIDZikzuGYdwQOMDpg/view?website#2': /home/vlad/lands/work/saved_lands/www.canva.com
+SiteError'https://www.canva.com/design/DAEswYt430k/W19zUSLojXyD-gNP4o5pug/view?website#2': /home/vlad/lands/work/saved_lands/www.canva.com
+SiteError: /home/vlad/lands/work/saved_lands/storage.googleapis.com
+SiteError: /home/vlad/lands/work/saved_lands/www.coinbase.com
+SiteError: /home/vlad/lands/work/saved_lands/systematiccentury.com
+SiteError: /home/vlad/lands/work/saved_lands/159.69.69.224
+SiteError'https://blog-feed.org/dialux-meduzainfo-lp/?ufl=14092 AA': /home/vlad/lands/work/saved_lands/blog-feed.org
