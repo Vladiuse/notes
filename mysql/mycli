@@ -1,0 +1,2 @@
+# Подключиться к бд через mycli
+mycli mysql://test_user@localhost:3306 -p `password`
