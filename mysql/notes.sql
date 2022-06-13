@@ -50,16 +50,68 @@ DELETE FROM table_name WHERE id=1;
 ALTER TABLE table_name ADD PRIMARY KEY (id);
 
 # Добавить колонку
-ALTER TABLE table_name ADD COLUMN column_name INT [PRIMARY KEY AUTO_INCREMENT];
+ALTER TABLE table_name 
+ADD COLUMN column_name INT [PRIMARY KEY AUTO_INCREMENT];
 
 # Удалить колонку
-ALTER TABLE table_name DROP COLUMN column_name;
+ALTER TABLE table_name
+DROP COLUMN column_name;
+
+#Изменение значения по умолчанию
+ALTER TABLE table_name
+ALTER COLUMN column_name SET DEFAULT 18;
+
+Изменение типа столбца
+ALTER TABLE table_name
+MODUFY COLUMN name CHAR(100);
 
 # добавить ограничение для поля 
-ALTER TABLE customers ADD CHECK (age IN (18,30));
+ALTER TABLE customers
+ADD CHECK (age IN (18,30));
 
-CREATE TABLE customers (
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    name CHAR(20) CONSTRAINT null_name CHECK(name !=''),
-    age INT CONSTRAINT full_age CHECK (age IN (18,100))
-    );
+# Удалить первичный ключ ( если на припари стоит AUTO_INCREMENT - его сначало нужно убрать)
+ALTER TABLE table_name
+DROP PRIMARY KEY;
+
+# Основные типы
+CHAR
+VARCHAR
+BOOL
+INT
+INT UNSIGNED
+FLOAT
+DOUBLE
+DATE
+TIME
+DATETIME
+YEAR
+
+
+# атрибуты
+PRIMARY KEY
+AUTO_INCREMENT
+UNIQUE
+NULL и NOT NULL
+DEFAULT
+CHECK
+Оператор CONSTRAINT
+
+# cвязи
+ON DELETE 
+ON UPDATE
+
+CASCADE
+SET NULL
+SET DEFAULT
+
+# вывод уникальных значение 
+SELECT DISTINCT
+
+# Добавлени данных
+INSERT INTO table_name (col_1, col_2) VALUES (data_1, data_2);
+
+# обновление данных
+UPDATE table_name SET col_name='data';
+
+# Удаление данных
+DELETE FROM table_name;

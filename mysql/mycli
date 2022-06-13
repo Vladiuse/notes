@@ -1,2 +1,8 @@
 # Подключиться к бд через mycli
 mycli mysql://test_user@localhost:3306 -p `password`
+
+# тестовая дб mysql
+https://github.com/datacharmer/test_db
+
+# статьсяБ задания и база данных для обучения
+https://betacode.net/10237/sql-tutorial-for-beginners-with-mysql
