@@ -61,6 +61,10 @@ DROP COLUMN column_name;
 ALTER TABLE table_name
 ALTER COLUMN column_name SET DEFAULT 18;
 
+# Сделать значение колонки уникальной
+ALTER TABLE table_name
+ADD UNIQUE (col_name);
+
 Изменение типа столбца
 ALTER TABLE table_name
 MODUFY COLUMN name CHAR(100);
@@ -73,37 +77,6 @@ ADD CHECK (age IN (18,30));
 ALTER TABLE table_name
 DROP PRIMARY KEY;
 
-# Основные типы
-CHAR
-VARCHAR
-BOOL
-INT
-INT UNSIGNED
-FLOAT
-DOUBLE
-DATE
-TIME
-DATETIME
-YEAR
-
-
-# атрибуты
-PRIMARY KEY
-AUTO_INCREMENT
-UNIQUE
-NULL и NOT NULL
-DEFAULT
-CHECK
-Оператор CONSTRAINT
-
-# cвязи
-ON DELETE 
-ON UPDATE
-
-CASCADE
-SET NULL
-SET DEFAULT
-
 # вывод уникальных значение 
 SELECT DISTINCT
 
@@ -115,3 +88,6 @@ UPDATE table_name SET col_name='data';
 
 # Удаление данных
 DELETE FROM table_name;
+
+#Поститать количество уникальных значений
+SELECT COUNT(DISTINCT(race)) FROM persons;
