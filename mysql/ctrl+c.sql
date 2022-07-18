@@ -145,3 +145,31 @@ CREATE TABLE Orders
     FOREIGN KEY (ProductId) REFERENCES Products(Id) ON DELETE CASCADE,
     FOREIGN KEY (CustomerId) REFERENCES Customers(Id) ON DELETE CASCADE
 );
+
+
+
+CREATE TABLE person
+(id int AUTO_INCREMENT NOT NULL, name CHAR(20),
+CONSTRAINT pk_person PRIMARY KEY (id) );
+
+INSERT INTO person
+(name) vALUES 
+('test name1'),
+('test name2'),
+('test name3'),
+('test name4'),
+('test name5'),
+('test name6'),
+('test name7');
+
+CREATE TABLE favorite_food
+(person_id INT, name CHAR(20),
+CONSTRAINT pk_fav_food PRIMARY KEY (person_id, name),
+CONSTRAINT fk_fav_food FOREIGN KEY (person_id) REFERENCES person(id));
+
+INSERT INTO favorite_food
+(person_id, name)
+VALUES
+(1,' some food 1'),
+(2,' some food 2'),
+(3,' some food 3');

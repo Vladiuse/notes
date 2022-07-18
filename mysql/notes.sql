@@ -91,3 +91,43 @@ DELETE FROM table_name;
 
 #Поститать количество уникальных значений
 SELECT COUNT(DISTINCT(race)) FROM persons;
+
+# Создание таблицы с проверкой
+CREATE TABLE person
+(name CHAR(10), gender CHAR(1) CHECK(gender IN ('m', 'w')));
+
+CREATE TABLE person
+(name CHAR(10), gender CHAR(1)
+CONSTRAINT check_gender CHECK(gender IN ('m', 'w')));
+
+# создание ограничения через ENUM
+CREATE TABLE person
+(name CHAR(20), gender ENUM('m','w'));
+
+
+# удаление проверки
+ALTER TABLE person
+DROP CONSTRAINT check_gender;
+# Добавление проверки
+ALTER TABLE person
+ADD CONSTRAINT check_gender CHECK (gender IN ('m', 'w', 'q'));
+
+#
+CREATE TABLE person
+(id int, name CHAR(20),
+CONSTRAINT pk_person PRIMARY KEY AUTO_INCREMENT (id));
+
+# посмотреть ограничения
+SELECT TABLE_NAME, CONSTRAINT_TYPE, CONSTRAINT_NAME
+FROM information_schema.table_constraints
+WHERE table_name=`table_name`;
+
+# удаление внешнего ключа
+ALTER TABLE favorite_food
+DROP foreign key fk_fav_food;
+
+# ограничние ключа с автоудалением
+ALTER TABLE favorite_food
+ADD CONSTRAINT fk_fav_food FOREIGN KEY (person_id) REFERENCES person(id) ON DELETE CASCADE;
+
+
