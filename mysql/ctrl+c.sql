@@ -170,6 +170,77 @@ CONSTRAINT fk_fav_food FOREIGN KEY (person_id) REFERENCES person(id));
 INSERT INTO favorite_food
 (person_id, name)
 VALUES
-(1,' some food 1'),
-(2,' some food 2'),
-(3,' some food 3');
+(1,' some food 32'),
+(4,' some food 4'),
+(3,' some food');
+
+
+
+SELECT e.emp_id, CONCAT_WS(' ', e.fname, e.lname) as fname,
+e.start_date, e.dept_id, d.name
+FROM employee e
+JOIN department d ON d.dept_id= e.dept_id;
+
+
+SELECT dept_id, count(*) FROM employee
+GROUP bY dept_id;
+
+SELECT *, RIGHT(fed_id, 4) FROM customer
+ORDER BY RIGHT(fed_id,4);
+
+  
+
+CREATE VIEW test_vw as 
+SELECT CONCAT_WS(' ',e.fname, e.lname) as full_name, account_id, cust_id, avail_balance FROM account
+JOIN employee e ON e.emp_id= account.open_emp_id
+WHERE status = 'active' AND pending_balance > 2500
+ORDER by pending_balance;
+
+SELECT a.account_id, a.last_activity_date, a.status, p.product_type_cd FROM account a
+JOIN product p ON a.product_cd = p.product_cd;
+
+
+
+CREATE TABLE test (
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name CHAR(10) NOT NULL,
+    some CHAR(5)
+);
+INSERT INTO test
+(name, some)
+VALUES
+('name 1', '123'),
+('name 2', '123'),
+('name 3', '123'),
+('name 4', null),
+('name 5', 'xxx'),
+('name 6', 'xxx'),
+('name 7', null);
+
+SELECT * FROM customer
+WHERE fed_id NOT LIKE '___-__-____' OR address LEFT(address,4) IN (1, 99);
+
+
+UPDATE person
+SET job = 'true'
+WHERE id  in (4,7);
+
+ 
+  
+
+CREATE TABLE job
+(name CHAR(20));
+
+
+SELECT p.name AS person_name, j.name AS Job name FROM person p
+INNER JOIN job  j ON p.job_id = j.id;
+
+SELECT e.fname, e.lname,d.name FROM employee e
+LEFT OUTER JOIN department d ON e.dept_id = d.dept_id
+ORDER by e.lname;
+
+
+
+SELECT p.name, pp.name FROM person p
+JOIN person pp;
+

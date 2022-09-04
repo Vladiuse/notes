@@ -504,3 +504,19 @@ $(function () {
         });
     }
 });
+
+
+
+
+var button = document.querySelector('.spin');
+var gameWrap = document.querySelector('.wheel__circle');
+
+
+
+let counter = 0
+let degrise = [180, 200, 300]
+button.addEventListener('click', function(){
+  let cur_deg = degrise[counter];
+  gameWrap.style.transform = `rotate(${cur_deg}deg)`;
+  counter ++;
+})

@@ -1,30 +1,3 @@
-# Ошибка mysql access denied for user 'root'@'localhost'
-# Решение: sudo mysql (чтоб зайти под рутом)
-
-# Создание пользрователя:
-CREATE USER 'test_user'@'localhost' IDENTIFIED BY 'password';
-CREATE USER 'newuser'@'localhost' IDENTIFIED BY 'password';
-
-# Удалить пользователяя: 
-DROP USER username@host;
-
-# Подключиться к базе 
-mysql -u test_user -h localhost -p
-
-# Посмотреть пользователей 
-SELECT USER,HOST FROM mysql.user;
-
-# Просмотр базданных 
-SHOW DATABASES;
-
-# Просмотр прав пользователя 
-SHOW GRANTS FOR test_user@localhost;
-
-# Расдать права пользователю 
-GRANT SELECT, INSERT ON *.* TO 'user_name'@'localhost';
-GRANT ALL ON test_user TO test_user@localhost;  #  раздача прав на конкретную базу данных
-GRANT ALL ON test_user.* to test_user@localhost;
-
 # Создать базу данных
 CREATE DATABASE db_name;
 
@@ -59,13 +32,13 @@ DROP COLUMN column_name;
 
 #Изменение значения по умолчанию
 ALTER TABLE table_name
-ALTER COLUMN column_name SET DEFAULT 18;
+ALTER column_name SET DEFAULT 18;
 
 # Сделать значение колонки уникальной
 ALTER TABLE table_name
 ADD UNIQUE (col_name);
 
-Изменение типа столбца
+# Изменение типа столбца
 ALTER TABLE table_name
 MODUFY COLUMN name CHAR(100);
 
@@ -112,6 +85,8 @@ DROP CONSTRAINT check_gender;
 ALTER TABLE person
 ADD CONSTRAINT check_gender CHECK (gender IN ('m', 'w', 'q'));
 
+
+
 #
 CREATE TABLE person
 (id int, name CHAR(20),
@@ -129,5 +104,14 @@ DROP foreign key fk_fav_food;
 # ограничние ключа с автоудалением
 ALTER TABLE favorite_food
 ADD CONSTRAINT fk_fav_food FOREIGN KEY (person_id) REFERENCES person(id) ON DELETE CASCADE;
+
+
+
+# Создание виртуальной таблицы(вью представления)
+CREATE VIEW  emploee_vw AS
+SELECT fname, lname FROM employee;
+
+# удаление представления
+DROP VIEW  emploee_vw;
 
 
