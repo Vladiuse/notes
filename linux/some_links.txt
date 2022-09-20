@@ -1,0 +1,2 @@
+1. драйвер для тачпада
+https://www.linuxuprising.com/2021/05/how-to-get-numpad-embedded-into.html
