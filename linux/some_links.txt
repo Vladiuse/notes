@@ -1,2 +1,8 @@
 1. драйвер для тачпада
 https://www.linuxuprising.com/2021/05/how-to-get-numpad-embedded-into.html
+
+Активация нужного интерпритатора
+https://stackoverflow.com/questions/42145656/unresolved-reference-django-error-in-pycharm
+
+про гит игнор
+https://www.atlassian.com/git/tutorials/saving-changes/gitignore
