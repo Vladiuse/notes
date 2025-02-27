@@ -1,0 +1,9 @@
+#!/bin/bash
+DB_NAME="$1"
+echo $DB_NAME
+if [[ -z "$DB_NAME" ]]; then
+    echo "Error: chose db_name"
+else
+    echo "Connecting to: $DB_NAME"
+    mycli mysql://"$DB_NAME"@localhost:3306
+fi
