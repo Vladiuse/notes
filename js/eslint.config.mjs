@@ -17,16 +17,17 @@ export default [
   {
     files: ["**/*.html"],
     plugins: { html },
+    languageOptions: {
+      globals: "$"
+    },
     rules: {
       "no-unused-vars": "warn"
     }
   },
   {
     files: ["**/*.js"],
-    // Уберите использование pluginJs.configs.recommended, чтобы не было конфликта
-    // или добавьте сюда нужные правила, если необходимо
     rules: {
-      "no-unused-vars": "warn",  // Отключаем для JS файлов
+      "no-unused-vars": "warn",
     }
   }
 
