@@ -3,3 +3,10 @@ npm init -y
 npm install --save-dev eslint @eslint/js eslint-plugin-html globals
 
 создаем файл в корне проекта eslint.config.mjs
+
+
+<script>
+    /* global StepsProgress,BsJsonForm, requestJson, $  */
+
+    так указывает глобальные переменные (если будет им тянуть например из других модулей)
+</script>
