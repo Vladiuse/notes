@@ -1,6 +1,7 @@
 import globals from "globals";
 import pluginJs from "@eslint/js";
-import html from "eslint-plugin-html";
+import html from "eslint-plugin-html"
+
 
 /** @type {import('eslint').Linter.Config[]} */
 export default [
@@ -9,35 +10,32 @@ export default [
     languageOptions: {
       sourceType: "script",
       globals: {
-        ...globals.browser, // Разворачиваем все глобальные переменные браузера
-        $: true // Добавляем jQuery $ как глобальную переменную
-      }
-    }
+        ...globals.browser,
+         $: true,
+        },
+    },
   },
-  {
-    languageOptions: {
-      globals: globals.browser
-    }
-  },
+  {languageOptions: { globals: globals.browser }},
   pluginJs.configs.recommended,
   {
     files: ["**/*.html"],
-    languageOptions: {
-      
+    plugins: { html },
+    rules: {
+      "no-unused-vars": "warn"
+    },
+       languageOptions: {
+
       globals: {
         ...globals.browser, // Разворачиваем все глобальные переменные браузера
         $: true // Добавляем jQuery $ как глобальную переменную
       }
     },
-    plugins: { html },
-    rules: {
-      "no-unused-vars": "warn"
-    }
   },
   {
     files: ["**/*.js"],
     rules: {
-      "no-unused-vars": "warn"
+      "no-unused-vars": "warn",
     }
   }
+
 ];
