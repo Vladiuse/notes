@@ -1,0 +1,22 @@
+connect to db
+
+sudo -u postgres psql
+
+-- 1. Создать пользователя:
+CREATE USER myuser WITH PASSWORD 'mypassword';
+
+-- 2. Создать базу:
+CREATE DATABASE mydb OWNER myuser;
+
+-- 3. (Если база уже есть) Передать владельца:
+ALTER DATABASE mydb OWNER TO myuser;
+
+-- 4. Выдать все привилегии на базу (если нужно дополнительно):
+GRANT ALL PRIVILEGES ON DATABASE mydb TO myuser;
+
+
+
+--- Чтобы дать пользователю право создавать базы в PostgreSQL:
+ALTER USER myuser CREATEDB;
+--проверить
+\du
