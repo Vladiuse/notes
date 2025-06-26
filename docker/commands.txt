@@ -1,0 +1,17 @@
+
+-- удалить все контейнеры
+docker rm $(docker ps -aq)
+
+-- удалить все images
+docker rmi -f $(docker images -aq)
+
+-- Чтобы зайти в работающий контейнер, используй команду:
+docker exec -it <container_name_or_id> /bin/sh
+
+-- посмотреть итоговый docker-compose.yaml
+docker compose congig
+
+-- запуска контейнера в фоне
+docker compose up -d
+
+docker compose logs -f nginx -- посмотреть логи
