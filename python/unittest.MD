@@ -44,6 +44,22 @@ def test():
 
 mock.method.side_effect = test
 assert mock.method()  == "test"
+
+
+# Conf
+conf = {
+    "run.return_value": 123,
+    "param": 100,
+    "error.side_effect": ZeroDivisionError("xxx")
+}
+mock = Mock(**conf)
+assert mock.run() == 123
+assert mock.param == 100
+try:
+    mock.error()
+    assert False
+except ZeroDivisionError:
+    pass
 </pre>
 
 ## patch
@@ -90,6 +106,11 @@ with patch.multiple(X, a="x", b="x"):
     assert x.b == "x"
 </pre>
 
+## ANY
+
+mock = Mock()
+mock(1, 2)
+mock.assert_called_with(1, ANY)
 
 ## 📘 Часто используемые атрибуты Mock
 
