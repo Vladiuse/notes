@@ -1,6 +1,0 @@
-.. Регулярки для VS Code
-
-.. Коментарии и пустые строки
-<!--[^]+--> HTML comments
-//[^]+ JS
-^\s*$\n HTML empty lines
