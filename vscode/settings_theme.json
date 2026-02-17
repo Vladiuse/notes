@@ -1,0 +1,204 @@
+{
+  "editor.fontSize": 15,
+  "editor.cursorStyle": "block",
+  "editor.fontFamily": "JetBrains Mono, Fira Code, monospace",
+  // <- -> == != === !== >= <=
+  "editor.fontLigatures": true,
+  "editor.lineHeight": 1.7,
+  "editor.formatOnSave": false,
+  "files.autoSave": "afterDelay",
+  "files.autoSaveDelay": 500,
+
+  "html.format.wrapLineLength": 200,
+  // авто импортирование
+  "python.analysis.autoImportCompletions": true,
+  // отрисовка обводки активной строки( там где находиться курсор)
+  "editor.renderLineHighlight": "none",
+  // Отключает подсветку всех вхождений при наведении
+
+  // Отключает подсветку только для выделенного текста
+  "editor.selectionHighlight": false,
+
+  "workbench.editor.enablePreview": true,
+  "workbench.editor.enablePreviewFromQuickOpen": true,
+  "workbench.sideBar.location": "right",
+  "prettier.printWidth": 200,
+  "prettier.tabWidth": 4,
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "files.autoSave": "off"
+  },
+  "editor.stickyScroll.enabled": false,
+  "[css]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.autoSave": "off"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "files.autoSave": "off"
+  },
+  "editor.minimap.enabled": false,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "window.titleBarStyle": "custom",
+  "[python]": {
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "liveServer.settings.ChromeDebuggingAttachment": false,
+  "liveServer.settings.CustomBrowser": "firefox",
+  "workbench.editor.empty.hint": "hidden",
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  // extensions
+  "errorLens.enabled": false,
+  // cSpell
+  "cSpell.dictionaries": ["python", "python-common", "django"],
+  "cSpell.language": "en, ru",
+  "cSpell.userWords": [
+    "usefixtures",
+    "binom",
+    "KEITARO",
+    "MailWizz",
+    "MAILGANER",
+    "autouse",
+    "Баер",
+    "einfo",
+    "dotenv",
+    "CRYPTER",
+    "authtoken",
+    "permisions",
+    "redoc",
+    "yasg",
+    "viewsets",
+    "elems",
+    "Truncator"
+  ],
+  "cSpell.ignoreRegExpList": ["вебхук\\S*", "баер\\S*"],
+  "editor.guides.indentation": false,
+  // "editor.semanticHighlighting.enabled": false,
+  "workbench.colorTheme": "Default Dark+",
+  "editor.bracketPairColorization.enabled": false,
+  "editor.tokenColorCustomizations": {
+    "textMateRules": [
+      {
+        "name": "Custom",
+        "scope": [
+          "entity.name.type",
+          "entity.name.namespace",
+          "punctuation.separator.period",
+          "meta.attribute",
+          "variable.other.constant",
+          "variable.other.enummember",
+          "constant.other.caps",
+          "support.type"
+        ],
+        "settings": {
+          "foreground": "#9CDCFE"
+        }
+      },
+
+      {
+        "scope": ["entity.name.function", "entity.name.function.decorator"],
+        "settings": {
+          "foreground": "#DCDCAA"
+        }
+      },
+      {
+        "scope": ["source.python keyword.operator.logical"],
+        "settings": {
+          "foreground": "#C586C0"
+        }
+      },
+      {
+        "name": "Python Function Call",
+        "scope": ["source.python meta.function-call.generic", "source.python meta.function-call", "source.python variable.function", "source.python support.function"],
+        "settings": {
+          "foreground": "#9CDCFE"
+        }
+      },
+      {
+        "name": "Python Self/Cls",
+        "scope": [
+          "variable.language.self",
+          "variable.language.special.self",
+          "variable.parameter.function.language.special.self",
+          "variable.parameter.function.language.special.cls"
+        ],
+        "settings": {
+          "foreground": "#569cd6"
+        }
+      },
+      {
+        "name": "Python Class and Def keywords",
+        "scope": ["source.python storage.type.class", "source.python storage.type.function", "source.python keyword.declaration.class", "keyword.declaration.function"],
+        "settings": {
+          "foreground": "#C586C0"
+        }
+      },
+      {
+        "name": "Python Magic Member Access",
+        "scope": ["support.function.magic", "support.variable.magic"],
+        "settings": {
+          "foreground": "#4EC9B0" // Тот же зеленый, что мы выбрали для магии
+        }
+      },
+      {
+        "name": "Python: Decorator Whole Line",
+        "scope": ["meta.function.decorator", "entity.name.function.decorator", "punctuation.definition.decorator", "meta.function.decorator.arguments"],
+        "settings": {
+          "foreground": "#DCDCAA", 
+          "fontStyle": ""
+        }
+      },
+      {
+        "name": "Python: Dots inside decorators",
+        "scope": ["meta.function.decorator punctuation.separator.period"],
+        "settings": {
+          "foreground": "#DCDCAA"
+        }
+      },
+      {
+        "name": "Python All Parentheses",
+        "scope": [
+          "punctuation.definition.arguments.begin", // Открывающая в вызовах/определениях
+          "punctuation.definition.arguments.end", // Закрывающая в вызовах/определениях
+          "punctuation.parenthesis.begin", // Скобки в выражениях (1 + 2)
+          "punctuation.parenthesis.end", // Скобки в выражениях
+          "punctuation.section.function.begin", // Скобки в def
+          "punctuation.section.function.end", // Скобки в def
+          "punctuation.section.class.begin", // Скобки в def
+          "punctuation.section.class.end", // Скобки в def
+          "punctuation.definition.inheritance.begin", // Скобки в def
+          "punctuation.definition.inheritance.end", // Скобки в def
+          "punctuation.definition.parameters.begin", // Скобки в def
+          "punctuation.definition.parameters.end", // Скобки в def
+          "punctuation.definition.list.begin",
+          "punctuation.definition.list.end",
+          "punctuation.separator.arguments",
+          "punctuation.separator.element"
+        ],
+        "settings": {
+          "foreground": "#D4D4D4"
+        }
+      },
+    ]
+  },
+  "editor.semanticTokenColorCustomizations": {
+    "rules": {
+      "magicFunction.declaration:python": "#4EC9B0",
+      "function.builtin": "#4EC9B0",
+      "class.builtin": "#4EC9B0",
+      "builtinConstant.builtin": "#C586C0",
+      // Красим вызовы методов (как self.method())
+      "method:python": "#9CDCFE",
+      "function:python": "#9CDCFE",
+      "function.declaration:python": "#DCDCAA",
+      "method.declaration:python": "#DCDCAA",
+      // "parameter.parameter": "#ffff00",
+      "*.decorator:python": "#DCDCAA",
+    }
+  }
+}
