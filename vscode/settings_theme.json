@@ -58,6 +58,7 @@
   "cSpell.dictionaries": ["python", "python-common", "django"],
   "cSpell.language": "en, ru",
   "cSpell.userWords": [
+    "klass",
     "usefixtures",
     "binom",
     "KEITARO",

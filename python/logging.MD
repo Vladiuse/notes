@@ -19,3 +19,11 @@
 %(processName)s     # имя процесса
 %(message)s         # итоговое сообщение (msg % args)
 </pre>
+
+<pre>
+FORMAT = "%(a)s %(b)s %(message)s"
+logging.basicConfig(level=logging.INFO, format=FORMAT)
+logging.info("logs: %s", "x", extra={"a": "A", "b": "B"})
+
+>> A B logs: x
+</pre>
