@@ -176,3 +176,7 @@ engCards/secrets.json
 
 trackers_data.json
 /app/_data/
+x.*
+x_*.*
+**/x.*
+**/x_*.*
