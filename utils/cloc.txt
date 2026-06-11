@@ -1,0 +1,1 @@
+cloc . --exclude-dir=.venv,.mypy_cache,.ruff_cache
