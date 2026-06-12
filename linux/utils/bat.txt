@@ -1,0 +1,2 @@
+echo 'alias bat="batcat"' >> ~/.bashrc
+source ~/.bashrc
