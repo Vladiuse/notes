@@ -1,3 +1,6 @@
+## Django Cache — основные методы
+
+```python   
 from django.core.cache import cache
 
 cache.set("key", "value", timeout=60)          # записать (timeout в секундах, None = бессрочно)
@@ -20,3 +23,4 @@ cache.delete_many(["a", "b"])                  # массовое удалени
 cache.clear()                                  # очистить весь кэш (текущий backend/alias)
 
 cache.touch("key", timeout=60)                 # обновить TTL без изменения значения
+```
