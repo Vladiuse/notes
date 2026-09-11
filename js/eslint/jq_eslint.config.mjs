@@ -3,33 +3,46 @@ import pluginJs from "@eslint/js";
 import html from "eslint-plugin-html"
 
 
+// Глобалы рантайма Apps Script: они существуют всегда, перечислять их
+// в директиве /* global */ каждого файла не нужно.
+const appsScriptGlobals = {
+  SpreadsheetApp: "readonly",
+  UrlFetchApp: "readonly",
+  PropertiesService: "readonly",
+  CacheService: "readonly",
+  LockService: "readonly",
+  DriveApp: "readonly",
+  GmailApp: "readonly",
+  MailApp: "readonly",
+  CalendarApp: "readonly",
+  DocumentApp: "readonly",
+  FormApp: "readonly",
+  SlidesApp: "readonly",
+  HtmlService: "readonly",
+  ScriptApp: "readonly",
+  Session: "readonly",
+  Utilities: "readonly",
+  Logger: "readonly",
+  Browser: "readonly",
+};
+
 /** @type {import('eslint').Linter.Config[]} */
 export default [
   {
     files: ["**/*.js"],
     languageOptions: {
-      sourceType: "script",
-      globals: {
-        ...globals.browser,
-         $: true,
-        },
+      sourceType: "module",
+      globals: { ...globals.browser, ...appsScriptGlobals }
     },
   },
-  {languageOptions: { globals: globals.browser }},
+  {languageOptions: { globals: { ...globals.browser, ...appsScriptGlobals } }},
   pluginJs.configs.recommended,
   {
     files: ["**/*.html"],
     plugins: { html },
     rules: {
       "no-unused-vars": "warn"
-    },
-       languageOptions: {
-
-      globals: {
-        ...globals.browser, // Разворачиваем все глобальные переменные браузера
-        $: true // Добавляем jQuery $ как глобальную переменную
-      }
-    },
+    }
   },
   {
     files: ["**/*.js"],
@@ -37,5 +50,4 @@ export default [
       "no-unused-vars": "warn",
     }
   }
-
 ];
