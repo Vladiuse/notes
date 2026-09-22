@@ -1,5 +1,5 @@
 [project]
-name = "name"
+name = "adveplay"
 version = "0.0.1"
 requires-python = ">=3.12"
 
@@ -55,6 +55,10 @@ ignore = [
 
 "**/scripts/**/x.py" = ["ALL"]
 "**/scripts/**/x_*.py" = ["ALL"]
+"**/scripts/**" = [
+  "T201", # print
+  "T203", # pprint
+]
 
 "**/tests/**/factories.py" = [
   "FBT001", # Boolean-typed positional argument in function definition
@@ -65,10 +69,14 @@ quote-style = "double"
 indent-style = "space"
 
 [tool.pyright]
-exclude = [
-    "**/node_modules",
-    "**/__pycache__",
-    "**/.*",
-    "scripts/**",
-    ".venv",
-]
+reportIncompatibleVariableOverride = "none"
+reportAttributeAccessIssue = "none"       # django manager methods from as_manager() as example, mypy covers this
+exclude = ["**/node_modules", "**/__pycache__", "**/.*", "scripts/**", ".venv"]
+
+[[tool.pyright.executionEnvironments]]
+root = "app/config"
+reportArgumentType = "none"
+reportCallIssue = "none"
+reportAttributeAccessIssue = "none"
+reportUnknownMemberType = "none"
+reportOptionalMemberAccess = "none"
